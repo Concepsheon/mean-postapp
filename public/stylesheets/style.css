@@ -1,0 +1,30 @@
+body {
+  padding: 50px;
+  font: 18px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.form-group {
+  width: 200px;
+}
+
+.container {
+  margin-left: 450px;
+  max-width: 300px;
+}
+
+.glyphicon {
+  cursor: pointer;
+  margin-left: 10px
+}
+
+.newpost {
+  margin-bottom: 15px;
+}
+
+.newpost2 {
+  margin-bottom: 25px;
+}

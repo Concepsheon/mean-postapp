@@ -1,0 +1,39 @@
+<div class='container'>
+<div ng-hide="isLoggedIn()">
+  <h3>You need to <a href="/#/login">Log In</a> or <a href="/#/register">Register</a> before you can add a post.</h3>
+</div>
+
+<div ng-repeat="post in posts | orderBy:'-upvotes'">
+    <div class='newpost'>
+        
+        <span>
+            <a ng-show="post.link" href="{{post.link}}">{{post.title}}</a>
+            <span ng-hide="post.link">{{post.title}}</span>
+            <span class="glyphicon glyphicon-thumbs-up"ng-click="upvote(post)"></span>
+            {{post.upvotes}}
+        </span>
+        </br>
+        <span><a href="#/posts/{{post._id}}">Comments</a></span>
+        <span ng-show="post.author"></span>posted by <a>{{post.author}}</a> |
+</span>
+    </div>
+</div>
+</hr>
+
+
+
+<form ng-submit="addPost()" ng-show="isLoggedIn()">
+    <h3>Add a new post</h3>
+
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Title" ng-model="title"></input>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Link" ng-model="link"></input>
+    </div>
+    <button type="submit" class="btn btn-primary">Post</button>
+</form>
+</div>
+
+
+
